@@ -18,8 +18,8 @@ export default function PaymentModal({ cartTotal, deliveryCost, onConfirm, onClo
   };
 
   const handlePaymentConfirm = (paymentData) => {
-    console.log("🔄 PaymentModal - Données reçues de PaymentMethodSelector:", paymentData);
-    console.log("🔄 PaymentModal - Détails livraison:", deliveryDetails);
+    console.log("PaymentModal - Données reçues de PaymentMethodSelector:", paymentData);
+    console.log("PaymentModal - Détails livraison:", deliveryDetails);
     
     // Combine delivery details and payment method
     const orderData = {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TrackingModal from "../components/TrackingModal";
 import EditModal from "../components/EditModal";
 import { formatPrice, getStatusStyle } from "../utils/helpers";
@@ -6,6 +6,42 @@ import { formatPrice, getStatusStyle } from "../utils/helpers";
 export default function Orders({ orders, onCancelOrder, onDeleteOrder, onUpdateStatus }) {
   const [trackOrder, setTrackOrder] = useState(null);
   const [editOrder, setEditOrder] = useState(null);
+  const [time, setTime] = useState(Date.now()); // Forcer le re-render toutes les secondes
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Vérifier si une commande peut être supprimée ou annulée (moins de 60 secondes)
+  const canModifyOrder = (order) => {
+    const createdAtTime = new Date(order.createdAt).getTime();
+    const elapsedSeconds = (time - createdAtTime) / 1000;
+    return elapsedSeconds < 60;
+  };
+
+  // Calculer le temps restant avant suppression/annulation interdite
+  const getTimeRemaining = (order) => {
+    const createdAtTime = new Date(order.createdAt).getTime();
+    const elapsedSeconds = Math.floor((time - createdAtTime) / 1000);
+    return Math.max(0, 60 - elapsedSeconds);
+  };
+
+  const handleDelete = (orderId) => {
+    try {
+      onDeleteOrder(orderId);
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  const handleCancel = (orderId) => {
+    try {
+      onCancelOrder(orderId);
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   if (orders.length === 0) {
     return (
@@ -74,15 +110,31 @@ export default function Orders({ orders, onCancelOrder, onDeleteOrder, onUpdateS
                  Suivre
               </button>
             
-              <button className="order-btn" onClick={() => onCancelOrder(order.id)}>
-                 Annuler
+              <button 
+                className="order-btn" 
+                style={{ 
+                  color: canModifyOrder(order) ? "var(--primary)" : "#ccc",
+                  cursor: canModifyOrder(order) ? "pointer" : "not-allowed",
+                  opacity: canModifyOrder(order) ? 1 : 0.6
+                }}
+                onClick={() => handleCancel(order.id)}
+                disabled={!canModifyOrder(order)}
+                title={!canModifyOrder(order) ? `Annulation disponible dans ${getTimeRemaining(order)}s` : "Annuler cette commande"}
+              >
+                 Annuler {!canModifyOrder(order) && `(${getTimeRemaining(order)}s)`}
               </button>
               <button 
                 className="order-btn" 
-                style={{ color: "#f44" }}
-                onClick={() => onDeleteOrder(order.id)}
+                style={{ 
+                  color: canModifyOrder(order) ? "#f44" : "#ccc",
+                  cursor: canModifyOrder(order) ? "pointer" : "not-allowed",
+                  opacity: canModifyOrder(order) ? 1 : 0.6
+                }}
+                onClick={() => handleDelete(order.id)}
+                disabled={!canModifyOrder(order)}
+                title={!canModifyOrder(order) ? `Suppression disponible dans ${getTimeRemaining(order)}s` : "Supprimer cette commande"}
               >
-                 Supprimer
+                 Supprimer {!canModifyOrder(order) && `(${getTimeRemaining(order)}s)`}
               </button>
             </div>
           </div>

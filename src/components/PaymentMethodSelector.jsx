@@ -419,10 +419,10 @@ export default function PaymentMethodSelector({
         total: total,
       };
       
-      console.log("📤 PaymentMethodSelector - Données envoyées:", paymentData);
+      console.log("PaymentMethodSelector - Données envoyées:", paymentData);
       onConfirm?.(paymentData);
     } catch (error) {
-      console.error("❌ PaymentMethodSelector - Erreur:", error);
+      console.error("PaymentMethodSelector - Erreur:", error);
       setPhoneError("Une erreur est survenue. Veuillez réessayer.");
     } finally {
       setProcessing(false);

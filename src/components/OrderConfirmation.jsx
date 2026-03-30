@@ -60,7 +60,7 @@ export default function OrderConfirmation({
           </div>
           
           <div className="delivery-info">
-            <h4>📦 Livraison prévue</h4>
+            <h4>Livraison prévue</h4>
             <p className="delivery-date">{getEstimatedDelivery()}</p>
             {orderData?.delivery?.deliveryType === "express" && (
               <span className="express-badge">Livraison Express</span>
@@ -87,18 +87,18 @@ export default function OrderConfirmation({
           
           {orderData?.delivery && (
             <div className="delivery-address-confirmation">
-              <h4>📍 Adresse de livraison</h4>
+              <h4>Adresse de livraison</h4>
               <p>{orderData.delivery.firstName} {orderData.delivery.lastName}</p>
               <p>{orderData.delivery.address}</p>
               {orderData.delivery.addressComplement && <p>{orderData.delivery.addressComplement}</p>}
               <p>{orderData.delivery.city}, {orderData.delivery.country}</p>
-              <p>📞 {orderData.delivery.phone}</p>
+              <p>{orderData.delivery.phone}</p>
             </div>
           )}
           
           {orderData?.payment && (
             <div className="payment-info-confirmation">
-              <h4>💳 Mode de paiement</h4>
+              <h4>Mode de paiement</h4>
               <p>{orderData.payment.method}</p>
               {orderData.payment.method === "cash" && (
                 <p className="cash-note">Paiement à la livraison</p>

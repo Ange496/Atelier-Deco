@@ -15,7 +15,12 @@ export const PRODUCTS = [
     price: 500000,
     description: "Titane, puce A17 Pro, appareil photo 48MP",
     img: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&q=80",
-    badge: "Nouveau"
+    badge: "Nouveau",
+    rating: 4.8,
+    reviews: 243,
+    stock: 15,
+    colors: ["Noir", "Gris titane", "Blanc", "Or"],
+    specs: ["6.1\" Super Retina XDR", "A17 Pro", "Caméra 48MP", "Titane"]
   },
   {
     id: 2,
@@ -24,7 +29,12 @@ export const PRODUCTS = [
     price: 89900,
     description: "Galaxy AI, écran 6.2\" AMOLED, 50MP",
     img: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&q=80",
-    badge: null
+    badge: "Populaire",
+    rating: 4.6,
+    reviews: 189,
+    stock: 25,
+    colors: ["Noir", "Argent", "Gold", "Violet"],
+    specs: ["AMOLED 6.2\"", "Snapdragon 8 Gen 3", "50MP Ultra", "IP68"]
   },
   {
     id: 3,
@@ -33,7 +43,12 @@ export const PRODUCTS = [
     price: 34900,
     description: "Réduction de bruit ultime, 30h autonomie",
     img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
-    badge: "Bestseller"
+    badge: "Bestseller",
+    rating: 4.9,
+    reviews: 512,
+    stock: 18,
+    colors: ["Noir", "Argent", "Bleu"],
+    specs: ["ANC adaptatif", "30h autonomie", "Multipoint", "LDAC"]
   },
   {
     id: 4,
@@ -42,7 +57,12 @@ export const PRODUCTS = [
     price: 2790,
     description: "Spatial Audio, ANC adaptatif, USB-C",
     img: "https://images.unsplash.com/photo-1603351154351-5e2d0600bb77?w=400&q=80",
-    badge: null
+    badge: "Populaire",
+    rating: 4.7,
+    reviews: 421,
+    stock: 32,
+    colors: ["Blanc"],
+    specs: ["USB-C", "Spatial Audio", "6h autonomie", "H2 Chip"]
   },
   {
     id: 5,
@@ -51,7 +71,12 @@ export const PRODUCTS = [
     price: 1299000,
     description: "Puce M3, 18h autonomie, 13.6\" Liquid Retina",
     img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80",
-    badge: "Nouveau"
+    badge: "Nouveau",
+    rating: 4.8,
+    reviews: 156,
+    stock: 8,
+    colors: ["Gris spatial", "Argent", "Noir", "Gold"],
+    specs: ["M3 8-core", "16GB RAM", "256GB SSD", "Liquid Retina"]
   },
   {
     id: 6,
@@ -60,7 +85,12 @@ export const PRODUCTS = [
     price: 109900,
     description: "Écran Ultra Retina XDR, chip M2, ProRes",
     img: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&q=80",
-    badge: null
+    badge: null,
+    rating: 4.7,
+    reviews: 234,
+    stock: 12,
+    colors: ["Gris spatial", "Argent"],
+    specs: ["M2 10-core", "12.9\" XDR", "ProMotion 120Hz", "StorageView"]
   },
   {
     id: 7,
@@ -68,8 +98,13 @@ export const PRODUCTS = [
     category: "Accessoires",
     price: 45000,
     description: "Charge rapide magnétique pour iPhone",
-    img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=80",
-    badge: null
+    img: "https://cdn.shopify.com/s/files/1/0493/9834/9974/products/Y1811JA1-Anker_3-in-1_Cube_with_MagSafe_3840x.png?v=1683879564",
+    badge: "Officiel",
+    rating: 4.5,
+    reviews: 87,
+    stock: 48,
+    colors: ["Blanc"],
+    specs: ["15W magnétique", "USB-C", "Compatible Qi", "Certifié MagSafe"]
   },
   {
     id: 8,
@@ -78,7 +113,12 @@ export const PRODUCTS = [
     price: 89900,
     description: "GPS double fréquence, titane 49mm",
     img: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400&q=80",
-    badge: "Pro"
+    badge: "Pro",
+    rating: 4.8,
+    reviews: 198,
+    stock: 9,
+    colors: ["Titane naturel", "Titane noir", "Titane or"],
+    specs: ["49mm Titane", "Écran Retina", "GPS+Cellular", "WR100"]
   },
   {
     id: 9,
@@ -86,8 +126,13 @@ export const PRODUCTS = [
     category: "Maison connectée",
     price: 12900,
     description: "3 ampoules LED connectées + pont",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
-    badge: null
+    img: "https://www.lightology.com/img/prod/650/1093492.jpg",
+    badge: null,
+    rating: 4.6,
+    reviews: 312,
+    stock: 22,
+    colors: ["Blanc"],
+    specs: ["3 ampoules 16M", "WiFi intégré", "Pont inclus", "Compatible Alexa"]
   },
   {
     id: 10,
@@ -96,7 +141,12 @@ export const PRODUCTS = [
     price: 9900,
     description: "Écran 7\", assistant Google, contrôle maison",
     img: "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=400&q=80",
-    badge: null
+    badge: null,
+    rating: 4.4,
+    reviews: 156,
+    stock: 19,
+    colors: ["Gris clair", "Gris craie"],
+    specs: ["Écran 7 pouces", "Google Assistant", "Touch control", "WiFi 5GHz"]
   },
   {
     id: 11,
@@ -105,7 +155,12 @@ export const PRODUCTS = [
     price: 159900,
     description: "Intel i9, RTX 4060, OLED 3.5K 120Hz",
     img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80",
-    badge: null
+    badge: null,
+    rating: 4.7,
+    reviews: 203,
+    stock: 6,
+    colors: ["Argent", "Noir"],
+    specs: ["i9-13900H", "RTX 4060", "OLED 120Hz", "32GB RAM"]
   },
   {
     id: 12,
@@ -114,9 +169,183 @@ export const PRODUCTS = [
     price: 13900,
     description: "Étanche IP67, 12h autonomie, son puissant",
     img: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&q=80",
-    badge: null
+    badge: null,
+    rating: 4.5,
+    reviews: 267,
+    stock: 26,
+    colors: ["Noir", "Blanc", "Bleu", "Rouge"],
+    specs: ["IP67 Waterproof", "12h Batterie", "Bluetooth 5.3", "Richer Bass"]
+  },
+  {
+    id: 13,
+    name: "OnePlus 12",
+    category: "Smartphones",
+    price: 73900,
+    description: "Snapdragon 8 Gen 3, charge 100W, 120Hz",
+    img: "https://tse4.mm.bing.net/th/id/OIP.0Ethio03n02NGbWQfOx20gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+    badge: "Promo",
+    rating: 4.6,
+    reviews: 178,
+    stock: 20,
+    colors: ["Noir", "Blanc", "Bleu"],
+    specs: ["6.8\" AMOLED", "Snapdragon 8 Gen 3", "Charge 100W", "IP69 Rating"]
+  },
+  {
+    id: 14,
+    name: "Google Pixel 8 Pro",
+    category: "Smartphones",
+    price: 99900,
+    description: "Tensor G3, IA avancée, photo HDR+",
+    img: "https://www.renderhub.com/madmix/google-pixel-9-pro/google-pixel-9-pro-11.jpg",
+    badge: "Nouveau",
+    rating: 4.7,
+    reviews: 342,
+    stock: 14,
+    colors: ["Noir", "Bleu porcelaine", "Gris granit"],
+    specs: ["Tensor G3", "6.7\" QHD+", "AI Magic Eraser", "Zoom 30x"]
+  },
+  {
+    id: 15,
+    name: "Samsung Galaxy Buds2 Pro",
+    category: "Audio",
+    price: 18900,
+    description: "ANC intelligent, son 360 audio, IP57",
+    img: "https://cdn.mos.cms.futurecdn.net/yhHffyCJGdA3ayMH34PMjh-1200-80.jpg",
+    badge: "Populaire",
+    rating: 4.6,
+    reviews: 289,
+    stock: 31,
+    colors: ["Noir", "Blanc", "Violet"],
+    specs: ["ANC adaptatif", "SSC codec", "8h Batterie", "IPX7"]
+  },
+  {
+    id: 16,
+    name: "Meta Quest 3",
+    category: "Informatique",
+    price: 54900,
+    description: "VR/AR, processeur Snapdragon, manettes",
+    img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=157327897433582&version=1747052537&transcode_extension=webp",
+    badge: "Nouveau",
+    rating: 4.5,
+    reviews: 124,
+    stock: 11,
+    colors: ["Blanc", "Noir"],
+    specs: ["Snapdragon XR Gen 2", "128GB Storage", "90Hz Refresh", "Mixed Reality"]
+  },
+  {
+    id: 17,
+    name: "Amazon Echo Dot 5",
+    category: "Maison connectée",
+    price: 5900,
+    description: "Haut-parleur intelligent, assistant vocal",
+    img: "https://www.gizmochina.com/wp-content/uploads/2022/09/Amazon-Echo-Dot-5th-gen.jpg",
+    badge: null,
+    rating: 4.4,
+    reviews: 528,
+    stock: 35,
+    colors: ["Noir charbon", "Bleu glacier", "Blanc pur"],
+    specs: ["Alexa intégrée", "Haut-parleur 1.6\"", "WiFi 6", "Smart Home Hub"]
+  },
+  {
+    id: 18,
+    name: "LG OLED55\"",
+    category: "Informatique",
+    price: 280000,
+    description: "Écran OLED, gaming 144Hz, IA Upscaling",
+    img: "https://tse3.mm.bing.net/th/id/OIP.Wbk_oMQl_EuYk7obOE7_RwHaE6?rs=1&pid=ImgDetMain&o=7&rm=3",
+    badge: "Premium",
+    rating: 4.8,
+    reviews: 95,
+    stock: 3,
+    colors: ["Noir"],
+    specs: ["OLED 4K", "144Hz", "PS5 Optimized", "Mini LED Backlit"]
+  },
+  {
+    id: 19,
+    name: "Bose QuietComfort 45",
+    category: "Audio",
+    price: 29900,
+    description: "ANC leader, confort exceptionnel, 24h batterie",
+    img: "https://m.media-amazon.com/images/I/81UfJWUoS9L._AC_.jpg",
+    badge: "Bestseller",
+    rating: 4.7,
+    reviews: 456,
+    stock: 16,
+    colors: ["Noir", "Argent", "Bleu"],
+    specs: ["ANC Bose", "24h Baterie", "Bluetooth 5.3", "Multipoint Connection"]
+  },
+  {
+    id: 20,
+    name: "Samsung Galaxy Tab S9",
+    category: "Informatique",
+    price: 65900,
+    description: "Écran AMOLED 11\", Snapdragon 8 Gen 2",
+    img: "https://www.chavda.com/cdn/shop/files/PartImage_d4c42f32-33c6-426f-b541-1be056d7a3ef.jpg?crop=center&height=700&v=1772544811&width=700",
+    badge: null,
+    rating: 4.6,
+    reviews: 167,
+    stock: 13,
+    colors: ["Graphite", "Silver", "Beige"],
+    specs: ["11\" AMOLED", "Snapdragon 8 Gen 2", "S Pen inclus", "IP68"]
+  },
+  {
+    id: 21,
+    name: "Anker Soundcore Space A40",
+    category: "Audio",
+    price: 8900,
+    description: "LDAC support, ANC, charge 10 minutes = 2h",
+    img: "https://cdn2.techbang.com/system/excerpt_images/88516/original/d329f1b5d44521d94493c7adf23cb538.jpg?1626610300",
+    badge: "Promo",
+    rating: 4.5,
+    reviews: 234,
+    stock: 28,
+    colors: ["Noir", "Blanc", "Gris"],
+    specs: ["LDAC support", "ANC adaptatif", "10h Batterie", "IP54"]
+  },
+  {
+    id: 22,
+    name: "Nintendo Switch OLED",
+    category: "Informatique",
+    price: 39900,
+    description: "Écran OLED 7\", batterie longue durée",
+    img: "https://www.nme.com/wp-content/uploads/2021/11/Nintendo-Switch-OLED-featured-2000x1270-1.jpg",
+    badge: "Gaming",
+    rating: 4.8,
+    reviews: 398,
+    stock: 19,
+    colors: ["Blanc", "Noir"],
+    specs: ["OLED 7 pouces", "Batterie 9h", "4.5TB Storage", "Joy-Con Upgrade"]
+  },
+  {
+    id: 23,
+    name: "Fossil Gen 6",
+    category: "Accessoires",
+    price: 32900,
+    description: "Wear OS 3, écran AMOLED, batterie 2j",
+    img: "https://www.unboxify.in/cdn/shop/products/71_UpS0PNvL._UL1000_5214c66d-333b-4d3c-8e3a-f0cbda1114d2.jpg?v=1694962749",
+    badge: null,
+    rating: 4.4,
+    reviews: 145,
+    stock: 21,
+    colors: ["Noir", "Argent", "Or"],
+    specs: ["Wear OS 3", "AMOLED 1.28\"", "48h Batterie", "5ATM"]
+  },
+  {
+    id: 24,
+    name: "Arlo Pro 4 Camera",
+    category: "Maison connectée",
+    price: 21900,
+    description: "Caméra WiFi, vision nocturne, détection IA",
+    img: "https://www.techhive.com/wp-content/uploads/2022/01/arlo-pro-4-100885088-orig.jpg?resize=1536%2C1024&quality=50&strip=all",
+    badge: "Sécurité",
+    rating: 4.6,
+    reviews: 201,
+    stock: 17,
+    colors: ["Blanc", "Noir"],
+    specs: ["WiFi 6E", "2K Video", "Night Infrared", "Motion Detection IA"]
   }
 ];
+
 
 export const SLIDES = [
   {

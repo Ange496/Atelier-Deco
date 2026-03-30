@@ -59,15 +59,15 @@ function App() {
   };
 
   const handlePlaceOrder = (orderData) => {
-    console.log("🔄 App - handlePlaceOrder reçu:", orderData);
+    console.log("App - handlePlaceOrder reçu:", orderData);
     
     if (cart.length === 0) {
-      console.warn("⚠️ App - Panier vide!");
+      console.warn("App - Panier vide!");
       return;
     }
     
     if (!user) {
-      console.log("⚠️ App - Utilisateur non connecté, redirection auth");
+      console.log("App - Utilisateur non connecté, redirection auth");
       setPendingOrder({
         items: cart,
         total: cartTotal,
@@ -79,9 +79,9 @@ function App() {
     }
     
     // Place order using the hook with complete data
-    console.log("📝 App - Création de la commande avec useOrders");
+    console.log("App - Création de la commande avec useOrders");
     const createdOrder = placeOrder(orderData);
-    console.log("✅ App - Commande créée:", createdOrder);
+    console.log("App - Commande créée:", createdOrder);
     
     // Save order to user's order history
     const users = JSON.parse(localStorage.getItem("users") || "[]");
@@ -97,7 +97,7 @@ function App() {
     
     // Set the order to view details
     setSelectedOrderId(createdOrder.id);
-    console.log("🔀 App - Navigation vers order-details, ID:", createdOrder.id);
+    console.log("App - Navigation vers order-details, ID:", createdOrder.id);
     setPage('order-details');
   };
 
