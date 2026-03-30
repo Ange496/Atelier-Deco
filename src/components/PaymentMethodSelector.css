@@ -1,0 +1,474 @@
+.payment-selector {
+  font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+  color: #111;
+  background-color: #fff;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+.summary-card {
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.summary-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #555;
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.address-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.address-icon {
+  font-size: 16px;
+  margin-top: 1px;
+}
+
+.address-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.address-detail {
+  font-size: 13px;
+  color: #666;
+}
+
+.address-phone {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #888;
+  margin-top: 3px;
+}
+
+.divider {
+  height: 1px;
+  background: #ebebeb;
+  margin: 14px 0;
+}
+
+.price-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.price-value {
+  font-size: 13px;
+  color: #555;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ebebeb;
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.total-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.total-amount {
+  font-size: clamp(18px, 4vw, 20px);
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.method-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #ebebeb;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.method-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.method-card.selected {
+  border-width: 2px;
+}
+
+.logo-pill {
+  width: 72px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: background-color 0.2s;
+  background-color: #f9f9f9;
+  border: 1px solid #e8e8e8;
+}
+
+.logo-pill.selected {
+  background-color: #fff;
+}
+
+.payment-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 42px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.method-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.method-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.method-name {
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.method-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.method-desc {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.radio {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid #d0d0d0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.phone-box {
+  border: 1.5px solid;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 24px;
+  transition: all 0.2s;
+}
+
+.phone-box.error {
+  border-color: #e53e3e;
+}
+
+.phone-box-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.phone-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phone-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.phone-hint {
+  font-size: 12px;
+  color: #888;
+}
+
+.phone-input {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid;
+  background: #fff;
+  color: #111;
+  font-family: inherit;
+  outline: none;
+  letter-spacing: 0.03em;
+  box-sizing: border-box;
+  transition: all 0.15s;
+}
+
+.phone-input:focus {
+  border-width: 2px;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #e53e3e;
+  margin-top: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 13px 18px;
+  border-radius: 12px;
+  border: 1.5px solid #dcdcdc;
+  background: transparent;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.back-btn:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.back-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirm-btn {
+  flex: 1;
+  padding: 13px 20px;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: -0.2px;
+  transition: all 0.2s;
+}
+
+.confirm-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.confirm-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.confirm-btn:disabled {
+  cursor: not-allowed;
+}
+
+
+.spinner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+
+@media (max-width: 480px) {
+  .payment-selector {
+    padding: 20px 16px 32px;
+  }
+
+  .summary-card {
+    padding: 14px 16px;
+  }
+
+  .method-card {
+    padding: 11px 14px;
+    gap: 10px;
+  }
+
+  .logo-pill,
+  .payment-logo {
+    width: 60px;
+    height: 38px;
+  }
+
+  .phone-box {
+    padding: 14px 16px;
+  }
+
+  .back-btn,
+  .confirm-btn {
+    padding: 11px 16px;
+  }
+}
+
+@media print {
+  .payment-selector {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .edit-btn,
+  .back-btn,
+  .confirm-btn {
+    display: none;
+  }
+}
